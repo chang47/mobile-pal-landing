@@ -85,6 +85,14 @@ ul {
   -webkit-text-fill-color: transparent;
 }
 
+.hero-message-bottom {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#FFFFFF, 	#87CEFA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: -20px;
+}
+
 .hero-sub-message {
 	background-color: rgba(0, 0, 0, 0.4);
 	color: white;

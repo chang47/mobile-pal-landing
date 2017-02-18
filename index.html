@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
+<script src="vendors/jquery.easings.min.js"></script>
+
+<!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
+<script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="jquery.fullPage.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.jquery.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<style type="text/css">
+	html {
+		width: 100%;
+		color: white;
+		font-family: "Arial Black", Gadget, sans-serif;
+	}
+	#container, #footer{
+
+		width: 100%;
+		position: fixed;
+		margin: 0 auto;
+	}
+	.section{
+		text-align:center;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+
+	.left-container {
+		top: 7vw;
+	    width: 32vw;
+	    right: -20vw;
+	    position: relative;
+	    transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+	    -moz-transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+	    -webkit-transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+	}
+
+	.right-container {
+		top: 50%;
+		left: 80vw;
+	    width: 32vw;
+	    position: absolute;
+		transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+	    -moz-transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+	    -webkit-transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+	}
+
+	.left-container-monster {
+		top: 25vw;
+	    width: 32vw;
+	    height: 50vw;
+	    right: -20vw;
+	    position: relative;
+	    transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+	    -moz-transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+	    -webkit-transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+	}
+	
+	.right-container-monster {
+		top: 29vw;
+		left: 80vw;
+	    width: 32vw;
+	    position: absolute;
+		transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+	    -moz-transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+	    -webkit-transform: translateX(-50%) translateY(-50%) translate3d(0,0,0);
+	}
+
+	.container-monster {
+		width: 100%;
+		height: 100%;
+		text-align: left;
+	}
+
+	.iphone {
+		position: fixed;
+	    z-index: 8;
+	    top: 50%;
+	    left: 50%;
+	    -webkit-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
+		width: 20vw;
+		height: 40vw;
+	}
+
+	.iphone-image {
+		position: fixed;
+		width: 20vw;
+		height: 40vw;
+	}
+
+	#myMenu {
+		position:fixed;
+		top:0;
+		left:0;
+		z-index: 2;
+		width: 100%;
+		padding: 0;
+		margin:0;
+	}
+
+	.swiper-container {
+		position: fixed;
+	    top: 5.3vw;
+	    left: 2.5vw;
+	}
+
+	.myImage {
+		width: 15vw;
+		height: 27.3vw;
+	}
+
+	#s1 {
+		background-image: url(n2.jpg);
+						background-size: cover;
+		background-position: center;
+	}
+
+	#s1-content {
+		background-color: #000000;
+    	opacity: 0.3;
+		content: "";
+	    display: block;
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    height: 100%;
+	    width: 100%;
+	}
+
+
+/*=	.s1-content {
+		transform: translate(0vw, 35vh);
+
+	}
+
+		.s1-content2 {
+		transform: skewY(-8deg);
+
+	}*/
+
+/*	.s1-background {
+		background-image: linear-gradient(#0988FE 0,#0CC6D3 98%);
+		transform: skewY(8deg);
+		height: 100%;
+		width: 100%;
+		top: -10%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}*/
+
+	#s2 {
+		background-color: #50aa8d;
+				background-size: cover;
+		background-position: center;
+	}
+
+	#s3 {
+		background-color: #50aa8d;
+				background-size: cover;
+		background-position: center top;
+	}
+
+	#s4 {
+
+		background-color: #50aa8d;
+
+				background-size: cover;
+		background-position: center bottom;
+	}
+
+
+	#s5 {
+		background-image: url(b3.jpg);
+		background-size: cover;
+		background-position: right center;
+	}
+
+	h1 {
+		color: yellow;
+	}
+
+	p {
+		color: white;
+	}
+
+	.monster-image {
+		position: fixed;
+		width: 12vw;
+		height: 12vw;
+		max-width: 250px;
+		max-height: 250px;
+		/*display: block;*/
+	}
+
+	@keyframes whole-container {
+		from {transform: translate(0vw, -150vh);}
+		to {}
+	}
+
+	.container-monster {
+		transform: translate(0vw, 0vh);
+		animation-name: whole-container;
+		animation-duration: 1.3s;
+		display: none;
+	}
+
+	#monster1 {
+		transform: translate(25vw, 15vh);
+	}
+
+	#monster2 {
+		transform: translate(5vw, 35vh);
+	}
+
+	#monster3 {
+		transform: translate(15vw, 55vh);
+	}
+
+	#monster4 {
+		transform: translate(65vw, 15vh);
+	}
+
+	#monster5 {
+		transform: translate(85vw, 35vh);
+	}
+
+	#monster6 {
+		transform: translate(80vw, 55vh);
+	}
+
+	@keyframes form {
+		from {transform: translate(45vw, 300vh);}
+		to {}
+	}
+
+	.signup-form {
+		transform: translate(40vw, 40vh);
+		position: fixed;
+		animation-name: form;
+		animation-duration: 1.3s;
+		z-index: 10;
+	}
+
+</style>
+</head>
+<body>
+
+<div id="phone" class="iphone">
+	<img src="iphone6.png" class="iphone-image">
+	<!-- Slider main container -->
+	<div class="swiper-container">
+	    <!-- Additional required wrapper -->
+	    <div class="swiper-wrapper">
+	        <!-- Slides -->
+	        <div class="swiper-slide"><img class="myImage" src="1.jpg"></div>
+	        <div class="swiper-slide"><img class="myImage" src="2.png"></div>
+	        <div class="swiper-slide"><img class="myImage" src="3.jpg"></div>
+	    </div>
+	    <!-- If we need pagination -->
+	    <div class="swiper-pagination"></div>
+	    
+	    <!-- If we need navigation buttons -->
+	</div>
+</div>
+
+<div id="fullpage">
+    <div class="section" id="s1">
+    	<div id="s1-content"></div>
+    		<div class="s1-content2">
+		    	<h1>Get Help Walking 10,000 Steps Everyday!</h1>
+		<!--     	<h1>Welcome to the next level of stepping gamification!</h1> -->
+		    	<hr>
+		    	<p>BLAH is the app that makes you WANT to achieve your daily fitness goals!</p>
+		    	<div style="text-align: center;">
+				    <form class="" style="text-align: center; text-align: center;">
+						<input class="form-control" type="text" name="email" placeholder="email" style="width: 20vw; min-width: 200px;">
+						<br>
+						<button class="btn btn-default">Join the Run!</button>
+					</form>
+		    </div>
+    	</div>
+    </div>
+    <div class="section" id="s2">
+    	<div class="left-container" style="top: 10vw;">
+    		<h1 style="font-size: 2.5vw;">
+    			Make Walking a Game!
+    		</h1>
+    		<p style="font-size: 1.5vw;">BLAH throws you into the mysterious world of SPLAH as a brand new runner. Pick your running partner and 
+    			start traveling around the world of SPLAH training your monsters and finding new ones and building the ultimate team!
+    		</p>
+    	</div>
+    	<div class="right-container">
+    		<ul>
+    			<li>
+	    			<img src="m2.png" style="height:100px; width:100px; float:left;">
+    				<h1>Transform Your World</h1>
+    				<p>BLAH uses your steps to power your actions in the game. Battle and capture other monstesr. Train and evolve your monsters. Compete and trade with your friends. Build the ultimate team! The world is in the power of your steps!</p>
+    			</li>
+    			<li>
+    				<img src="m7.png" style="height:100px; width:100px; float:left;">
+    				<h1>Travel the World of BLAH</h1>
+    				<p>BLAH is a large world. Travel from the games town to find new... and stronger monsters!</p>
+    			</li>
+    			<li>
+    				<h1>2 Different play styles</h1>
+    				<p>Open the app, start a walk, and let the game run in the background. Or, help your monsters fight while you walk, we adapt to your play style!</p>
+    			</li>
+    		</ul>
+    		<!-- <h1 style="font-size: 3vw;">
+    			So many lives<br>
+    			So many games<br>
+    			So many deaths
+    		</h1>
+    		<p style="font-size: 2vw;">These are just some random words, If you want what I mean there is a secret to fitness</p> -->
+    	</div>
+    </div>
+    <div class="section" id="s3">
+    	<div class="left-container" style="top: 10vw;">
+    		<h1 style="font-size: 2.5vw;">
+    			Get Rewarded for a Healthy Lifestyle
+    		</h1>
+    		<p style="font-size: 1.5vw;">Being active everyday is hard. BLAH makes it easier by giving you in-game points that'll help you get rare-unique monsters and more! All you have to do is make sure you achieve your daily goals!</p>
+    	</div>
+    	<div class="right-container">
+    		<ul>
+    			<li>
+    				<img src="m1.png" style="height:100px; width:100px; float:left;">
+    				<h1>Be Active, Get Rewarded</h1>
+    				<p>BLAH is filled with milestones. Everytime you pass one. You get rewarded with rare monsters.</p>
+    			</li>
+    			<li>
+
+    				<img src="m6.png" style="height:100px; width:100px; float:left;">
+    				<h1>Team up with friends for more!</h1>
+    				<p>Team up with your friends and combine your steps together to get even bigger rewards! Be healthy together!</p>
+    			</li>
+    		</ul>
+    	</div>
+    </div>
+    <div class="section" id="s4">
+    	<div class="left-container">
+    		<h1 style="font-size: 2.5vw;">
+    			Can You Collect Them All?
+    		</h1>
+    		<p style="font-size: 1.5vw;">There's an ever-growing number of monsters with 100+ planned to be made. Each monster can evolve and have thier own unique ability and element. Assemble your personal team and take on the world!</p>
+    	</div>
+    	<div class="right-container">
+    		<ul>
+    			<li>
+	    			<img src="m4.png" style="height:100px; width:100px; float:left;">
+    				<h1>Random Monsters</h1>
+    				<p>By using in-game gems earned by being active, players unlock random unique monsters. No players will ever have the same experience!</p>
+    			</li>
+    			<li>
+	    			<img src="m8.png" style="height:100px; width:100px; float:left;">
+    				<h1>Trade with your friends</h1>
+    				<p>Your friend has a monster you want? Let's hope you have something they want too!</p>
+    			</li>
+    		</ul>
+    	</div>
+    </div>
+    <div class="section" id="s5">
+    	<div id="end-form" class="signup-form" >
+    		<h1>Join the Run</h1>
+    		<p>sign up below</p>
+    		<form class="" style="text-align: center;">
+    			<input class="form-control" type="text" name="email" placeholder="email" style="width: 20vw; min-width: 200px;">
+    			<br>
+    			<button class="btn btn-default">Join the Run!</button>
+    		</form>
+    	</div>
+    	<div id="container-monster" class="container-monster">
+	    	<img src="m1.png" id="monster1" class="monster-image">
+	    	<img src="m2.png" id="monster2" class="monster-image">
+	    	<img src="m4.png" id="monster3" class="monster-image">
+	    	<img src="m6.png" id="monster4" class="monster-image">
+	    	<img src="m7.png" id="monster5" class="monster-image">
+	    	<img src="m8.png" id="monster6" class="monster-image">
+    	</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    var mySwiper = new Swiper ('.swiper-container', {
+    	direction: 'vertical',
+    	loop: true,
+    	nextButton: '.swiper-button-next',
+    	prevButton: '.swiper-button-prev',
+    	autoHeight: true,
+    });
+
+	if(window.location.hash) {
+	    var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+	    if (hash == "signup" || hash == "intro") {
+	    	$('#phone').hide();
+	    }
+	}
+
+    	//sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#fff'],
+	var TRANSITION_TIME = 0;
+    $('#fullpage').fullpage({
+    	anchors: ['intro', 'run', 'reward', 'collect', 'signup'],
+    	sectionsColor: ['#f2f2f2', 'white', '#f2f2f2', '#FF561F', '#fff'],
+    	menu: '#myMenu',
+    	navigation: true,
+    	onLeave: function(index, nextIndex, direction) {
+    		if (index == 1 && nextIndex == 2) {
+    			$('#phone').css("top", "150%");
+    			$('#phone').show();
+    			$('#phone').animate({
+    				top: '50%'
+    			});
+    			//mySwiper.slideNext(false, 500);
+    		} else if (index == 2 && nextIndex == 1) {
+    			$('#phone').animate({
+    				top: "150%"
+    			});
+
+    			//mySwiper.slidePrev(false, 500);
+    		} else if (index == 4 && nextIndex == 5) {
+    			$('#phone').animate({
+    				top: -550
+    			});
+    			$('#end-form').addClass('signup-form').show();
+    		} else if (index == 5 && nextIndex == 4) {
+    			$('#phone').css("top", -550);
+    			$('#phone').show();
+    			$('#phone').animate({
+    				top: '50%'
+    			});
+    		} else if (index + 1 == nextIndex) {
+    			mySwiper.slideNext(false, TRANSITION_TIME);
+    		} else if (index - 1 == nextIndex) {
+				mySwiper.slidePrev(false, TRANSITION_TIME);
+    		}
+    	},
+    	afterLoad: function(anchorLink, index) {
+    		if (index == 4) {
+    			$('#container-monster').removeClass('.container-monster').hide();
+    			$('#end-form').removeClass('signup-form').hide();
+    		}
+    		if (index == 5) {
+    			$('#container-monster').addClass('.container-monster').show();
+    			$('#phone').hide();
+    		}
+    	},
+    });
+});
+</script>
+</body>
+</html>

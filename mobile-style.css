@@ -1,0 +1,187 @@
+/* Normal 1920 */
+.row {
+	margin: 0 0 0 0;
+}
+
+.hero {
+	height: 100vh;		
+}
+
+.hero-image-container {
+	background-image: url(n3.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 80vh;
+}
+
+.hero-image-container-middle {
+	position: relative;
+	display: table;
+	height: 100%;
+}
+
+.hero-left-content {
+	display: table-cell;
+    vertical-align: bottom;
+	color: white;
+	padding-bottom: 15%;
+	padding-left: 10%;
+}
+
+.hero-right-content {
+	color: white;
+	display: table-cell;
+    vertical-align: bottom;
+	padding-bottom: 5%;
+}
+
+.phone1 {
+	height: 60vh;
+}
+
+.hero-icon-menu {
+	height: 20vh;
+}
+
+.section-feature1 {
+	height: 80vh;
+	background-color: #f2f2f2;
+}
+
+.section-feature2 {
+	height: 80vh;
+	background-color: white;
+}
+
+.section-feature3 {
+	height: 35vh;
+	background-color: #f2f2f2;
+}
+
+.section-form {
+	height: 50vh;
+	background-color: white;
+}
+
+.email-form {
+	margin-top: 60px;
+	width: 40vh;
+	height: 20vh;
+	box-shadow: 3px 3px 10px #888888;
+}
+
+.inner-form {
+	padding: 15px;
+}
+
+.footer {
+	padding-top: 20px;
+	height: 10vh;
+	text-align: center;
+	background-color: #f2f2f2;
+}
+
+.monster-portrait {
+	width: 200px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: red;
+}
+
+.slick-prev {
+	left: 0px;
+	vertical-align: middle;
+}
+
+.top-space {
+	margin-top: 100px;
+}
+
+.phone {
+	height: 60vh;
+	text-align: center;
+}
+
+.monster-portrait {
+	height: 13vw;
+	width: auto;
+}
+
+#slick {
+	width: 30vw;
+	margin-left: -5%;
+}
+
+.slick-prev {
+	left: 20vw;
+}
+
+.slick-next {
+	right:20vw;
+}
+
+/* mobile */
+@media all {
+	.hero-image-container {
+		height: 50vh;
+	}
+    .hero-left-content {
+    	padding-top: 10%;
+		vertical-align: middle;
+    	text-align: center;
+    }
+
+    .hero-icon-menu {
+    	height: 450px;
+    }
+
+    .phone1 {
+        display: none;
+    }
+
+    .section-feature1 {
+		height: 110vh;
+		background-color: #f2f2f2;
+	}
+
+	.feature1-phone {
+		position: absolute;
+		margin-top: 60vh;
+		margin-left: -60vw;
+		height: 40vh;
+	}
+
+	.feature2-phone {
+		position: absolute;
+		margin-top: 63vh;
+		margin-left: -60vw;
+		height: 40vh;
+		margin-top: 50px;
+	}
+
+	.section-feature2 {
+		height: 900px;
+		background-color: white;
+	}
+
+	.section-feature3 {
+		height: 300px;
+		background-color: #f2f2f2;
+	}
+
+	.top-space {
+		margin-top: 50px;
+	}
+
+
+	.navbar {
+		display: none;
+	}
+
+	.monster-portrait {
+		height: 150px;
+		width: auto;
+	}
+}

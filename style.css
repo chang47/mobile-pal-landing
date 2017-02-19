@@ -313,6 +313,10 @@ to {
 	text-align: right;
 }
 
+.feature0-phone-container {
+	text-align: center;
+}
+
 .email-form {
 	margin-top: 60px;
 	width: 500px;
@@ -344,7 +348,7 @@ to {
 }
 
 .top-space {
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 .phone {

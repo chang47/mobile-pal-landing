@@ -59,14 +59,12 @@ a:hover {
 
 .hero-image-container {
 	background-image: url("BG0.jpg");
-	background-color: white;
-	background-size: 120% 130%;
+	background-size: 120%;
 	background-position: center bottom;
     background-repeat: no-repeat;
 	height: 80vh;
 	font-family: "Lato", "Serif";
 	animation: mover 20s linear infinite;
-	
 }
 
 .pal-content {

@@ -8,6 +8,7 @@ h1 {
 	font-size: 40px;
 	font-weight: 400;
 	font-family: 'Oswald', sans-serif;
+	text-shadow: 3px 3px 3px #CCCCCC;
 }
 
 h3 {
@@ -40,14 +41,6 @@ a:hover {
 	color: green;
 }
 
-/*p {
-	font-size: 18px;
-}
-
-ul {
-	font-size: 18px;
-}*/
-
 .header-list li a h3 {
 	color: black;
 }
@@ -65,7 +58,7 @@ ul {
 }
 
 .hero-image-container {
-	background-image: url("BG0.png");
+	background-image: url("BG0.jpg");
 	background-color: white;
 	background-size: 120% 130%;
 	background-position: center bottom;
@@ -74,36 +67,6 @@ ul {
 	font-family: "Lato", "Serif";
 	animation: mover 20s linear infinite;
 	
-}
-
-.hero-image-words-container {
-	margin-top:10vh;
-	background-color: rgba(0, 0, 0, 0.4);
-	padding-bottom: 10px;
-}
-
-.hero-message {
-  font-size: 72px;
-  background: -webkit-linear-gradient(#FFFFFF, 	#87CEFA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero-message-bottom {
-  font-size: 72px;
-  background: -webkit-linear-gradient(#FFFFFF, 	#87CEFA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: -20px;
-}
-
-.hero-sub-message {
-	background-color: rgba(0, 0, 0, 0.4);
-	color: white;
-	display: inline-block;
-	padding-left: 15px;
-	padding-right: 15px;
-	font-size: 24px;
 }
 
 .pal-content {
@@ -119,43 +82,43 @@ ul {
 
 @keyframes mover{
 	0% {
-		background-image: url("BG0.png");
+		background-image: url("BG0.jpg");
 		background-position: center left;
 	}
 	15% {
-		background-image: url("BG0.png");		
+		background-image: url("BG0.jpg");		
 	}
 
 	20% {
-		background-image: url("BG1.png");	
+		background-image: url("BG1.jpg");	
 	}
 	
 	35% {
-		background-image: url("BG1.png");
+		background-image: url("BG1.jpg");
 	}
 	40% {
 		background-position: center right;
-		background-image: url("BG2.png");	
+		background-image: url("BG2.jpg");	
 	}
 
 	60% {
-		background-image: url("BG2.png");
+		background-image: url("BG2.jpg");
 	}
 
 	65% {
-		background-image: url("BG1.png");
+		background-image: url("BG1.jpg");
 	}
 
 	80% {
-		background-image: url("BG1.png");	
+		background-image: url("BG1.jpg");	
 	}
 
 	95% {
-		background-image: url("BG1.png");
+		background-image: url("BG1.jpg");
 	}
 
 	100% {
-		background-image: url("BG0.png");
+		background-image: url("BG0.jpg");
 		background-position: center left;
 	}
 }
@@ -182,34 +145,15 @@ ul {
     cursor: pointer;
 }
 
-.hero-image-container-middle {
-	position: relative;
-	display: table;
-	height: 100%;
-}
-
-.hero-left-content {
-	display: table-cell;
-    vertical-align: bottom;
-	color: black;
-	padding-bottom: 15%;
-	padding-left: 10%;
-}
-
-.hero-right-content {
-	color: white;
-	display: table-cell;
-    vertical-align: bottom;
-	padding-bottom: 5%;
-}
-
 .phone1 {
 	height: 70vh;
 }
 
-.hero-icon-menu {
-	min-height: 20vh;
-	background-color: #f2f2f2;
+/* for scaling image sizes */
+.feature-flex-container {
+	display: flex;
+    flex-direction: row;
+    align-items: stretch;
 }
 
 .section-how-to-play {
@@ -219,24 +163,13 @@ ul {
 	padding-bottom: 50px;
 }
 
-.section-feature1 {
-	height: 100%;
-/*	background-color: #f2f2f2;*/
-	background-color: #9fd5e2;
-	padding-bottom: 50px;
-}
-
-.section-feature1::before {
-	content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    background-size: cover;
-	background-image: url('m1.png');
-	background-size: 450px 450px;
-	background-repeat: no-repeat;
-	background-position: 0 50%;
+.feature0-phone-container {
+	text-align: center;
+	background-image: url('mockup/screenshot-town.png');
+    background-repeat: no-repeat;
+    background-size: contain; /* Make the image cover the div */
+    background-position: 50%; /* Center the image inside the div */
+    min-height: 500px;
 }
 
 .section-feature2 {
@@ -255,7 +188,15 @@ ul {
 	background-image: url('m05.png');
 	background-size: 450px 450px;
 	background-repeat: no-repeat;
-	background-position: 100% 0;
+	background-position: 100% 0%;
+}
+
+.feature2-flex-phone-container {
+	background-image: url('mockup/screenshot-run.png');
+    background-repeat: no-repeat;
+    background-size: contain; /* Make the image cover the div */
+    background-position: 90%; /* Center the image inside the div */
+    min-height: 500px;
 }
 
 .section-feature3 {
@@ -275,6 +216,14 @@ ul {
 	background-size: 450px 450px;
 	background-repeat: no-repeat;
 	background-position: 0 0;
+}
+
+.feature3-flex-phone-container {
+	background-image: url('mockup/screenshot-reward.png');
+    background-repeat: no-repeat;
+    background-size: contain; /* Make the image cover the div */
+    background-position: 90%; /* Center the image inside the div */
+    min-height: 500px;
 }
 
 .section-feature4 {
@@ -299,10 +248,10 @@ ul {
 	text-align: right;
 }
 
-.feature0-phone-container {
-	text-align: center;
+/*.feature0-phone {
+	height: 80vh;
 }
-
+*/
 .email-form {
 	margin-top: 60px;
 	width: 500px;
@@ -337,11 +286,6 @@ ul {
 	margin-top: 50px;
 }
 
-.phone {
-	height: 80vh;
-	text-align: center;
-}
-
 #slick {
 	width: 30vw;
 	margin-left: -5%;
@@ -356,15 +300,22 @@ ul {
 }
 
 
-@media (max-height: px) and (min-width: 767px) {
-	.hero-icon-menu {
-		height: 30vh;
-	}
-}
-
 @media (max-width: 800px) {
 	.hero-image-container {
 		background-size: 200% 100%;
+	}
+}
+
+/* Removes the flex box for mobile-like devices */
+@media (max-width: 600px) {
+	.feature-flex-container {
+		display: block;
+	}
+	.feature2-flex-phone-container {
+		background-position: 50%;
+	}
+	.feature3-flex-phone-container {
+		background-position: 50%;
 	}
 }
 
@@ -399,13 +350,6 @@ ul {
 	.top-space {
 		margin-top: 10px;
 	}
-
-/*	.feature1-phone {
-		position: absolute;
-		margin-top: 140vh;
-		margin-left: -70vw;
-		height: 60vh;
-	}*/
 
 	.feature1-phone-container, .feature2-phone-container {
 		text-align: center;
@@ -518,19 +462,6 @@ ul {
 
 	.hero-right-content {
 		display: none;
-	}
-
-}
-
-/* normal desktop screen sizes */
-@media (min-width: 992px) {
-
-}
-
-/* large device screen size */
-@media (min-width: 1280px) {
-	h1 {
-		font-size: 40px;
 	}
 
 }

@@ -51,6 +51,10 @@ ul {
 	color: black;
 }
 
+.header-list li:hover {
+	background-color:#f2f2f2;
+}
+
 .row {
 	margin: 0 0 0 0;
 }
@@ -64,11 +68,10 @@ ul {
 	background-color: white;
 	background-size: 120% 130%;
 	background-position: center bottom;
-	background-attachment: fixed;
     background-repeat: no-repeat;
 	height: 80vh;
 	font-family: "Lato", "Serif";
-	animation: mover 15s linear infinite;
+	animation: mover 20s linear infinite;
 	
 }
 
@@ -102,14 +105,6 @@ ul {
 	font-size: 24px;
 }
 
-/*@keyframes move{
-from {background-position: center left;}
-to {
-		background-position: center right;
-	}
-}
-*/
-
 .pal-content {
 	background-image: url("BG01.png");
 	height: auto;
@@ -126,11 +121,17 @@ to {
 		background-image: url("BG0.png");
 		background-position: center left;
 	}
-	
+	15% {
+		background-image: url("BG0.png");		
+	}
+
 	20% {
 		background-image: url("BG1.png");	
 	}
 	
+	35% {
+		background-image: url("BG1.png");
+	}
 	40% {
 		background-position: center right;
 		background-image: url("BG2.png");	
@@ -140,8 +141,16 @@ to {
 		background-image: url("BG2.png");
 	}
 
+	65% {
+		background-image: url("BG1.png");
+	}
+
 	80% {
 		background-image: url("BG1.png");	
+	}
+
+	95% {
+		background-image: url("BG1.png");
 	}
 
 	100% {
@@ -149,30 +158,6 @@ to {
 		background-position: center left;
 	}
 }
-
-/*@keyframes mover{
-	0% {
-		background-image: url("BG02.png");
-		background-position: center left;
-	}
-
-	45% {
-	}
-	
-	50% {
-		background-image: url("BG02.png");	
-		background-position: center right;
-	}
-	51% {
-		background-image: url("BG01.png");	
-		background-position: center left;	
-	}
-	100% {
-
-		background-image: url("BG01.png");
-		background-position: center right;
-	}
-}*/
 
 .hero-p {
 	color: #cccccc;

@@ -9,7 +9,7 @@
 <script type="text/javascript" src="jquery.jcarousel.min.js"></script>
 <script src="jcarousel.js"></script>
 
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -263,6 +263,8 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
+		var height = $('.navbar').height();
+
 		$('.navbar').hide();
 		$(function() {
 			$(window).scroll(function() {
@@ -277,21 +279,17 @@
 			});
 		});
 
-	$('#signup').click(function() {
-		var email = $('#email').val();
-		var html = "<h1 style=\"color: #42C1C8;\"><b>Thanks!</b></h1><h2 style=\"color: #42C1C8;\"><b>We've sent a confirmation email.</b></h2>"
-		$('#email-form').replaceWith(html);
-		
-/*		var data=$('<div class="success message"><h5>FYI, something just happened!</h5><p>This is just an info notification message.</p> </div>');    
-		var popup= $('<div>');
-		popup.append(data);
-		$('body').append(popup);
-		popup.css("position","absolute");
-		popup.css("top", ($(window).height() - popup.height() ) / 2+ $(window).scrollTop() + "px");
-		popup.css("left", ($(window).width() - popup.width() ) / 2+ $(window).scrollLeft() + "px");            
-		popup.fadeOut(3000);*/
+		$(window).on("hashchange", function() {
+			if (location.hash.length !== 0) {
+				window.scrollTo(window.scrollX, window.scrollY - height);
+			}
+		});
 
-	});
+		$('#signup').click(function() {
+			var email = $('#email').val();
+			var html = "<h1 style=\"color: #42C1C8;\"><b>Thanks!</b></h1><h2 style=\"color: #42C1C8;\"><b>We've sent a confirmation email.</b></h2>"
+			$('#email-form').replaceWith(html);
+		});
 
 	});
 </script>

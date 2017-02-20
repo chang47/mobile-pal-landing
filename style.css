@@ -61,7 +61,7 @@ ul {
 
 .hero-image-container {
 	background-image: url("BG0.png");
-	background-color: #4caf50;
+	background-color: white;
 	background-size: 120% 130%;
 	background-position: center bottom;
 	background-attachment: fixed;
@@ -299,7 +299,7 @@ to {
 }
 
 .section-form {
-	height: 100%;
+	min-height: 100%;
 	background-color: white;
 	padding-bottom: 50px;
 }

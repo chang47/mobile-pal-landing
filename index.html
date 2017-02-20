@@ -83,8 +83,8 @@
 				<div class="row">
 					
 					<div class="col-md-offset-2 col-md-5 col-sm-4">
-						<h1 style="font-size: 36px;"><b>Run in the Real World</b></h1>
-						<div style="font-size: 36px; color: #CE2D0F;"><b>Become the Best Trainer in Another</b></div>
+						<h1 style="font-size: 36px;"><b>Run in the Real World.</b></h1>
+						<div style="font-size: 36px; color: #42C1C8;"><b>Become the Best in Another.</b></div>
 						<hr />
 						<p style="font-size: 24px;">
 							Mobile Pals are cute and active creatures that roam across the world. They like to work out with other people to become stronger to compete against other Mobile Pals. You've finally decided to follow your dream to become the Mobile Pal World Champion! 
@@ -201,7 +201,7 @@
 		<div style="padding-top: 30px;">
 			<div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6 col-xs-offset-2 col-xs-8">
 				<center>
-					<h1><b>Meet Your Mobile Pals!<b></h1>
+					<h1 style="font-size: 60px;"><b>Meet Your Pals!<b></h1>
 					<div class="pal-content" >
 						<img id="show-pal" src="m02.png" height="auto" />
 					</div>
@@ -246,10 +246,10 @@
 				<center>
 					<h1><b>Want early access to Mobile Pals Run?</b></h1>
 					<h3>Sign up and get an <b>EXCLUSIVE</b> beta tester starter pack!</h3>
-					<div class="email-form">
-						<div class="inner-form" style="text-align: center;">
-							<input class="bottom-hero-text" type="text" name="" placeholder="Email">
-							<button class="bottom-hero-button">Sign Up</button>
+					<div id="email-form" class="email-form">
+						<div id="inner-form" class="inner-form" style="text-align: center;">
+							<input id="email" class="bottom-hero-text" type="text" name="" placeholder="Email">
+							<button id="signup" class="bottom-hero-button">Sign Up</button>
 						</div>
 					</div>
 				</center>
@@ -277,6 +277,23 @@
 				}
 			});
 		});
+
+	$('#signup').click(function() {
+		var email = $('#email').val();
+		var html = "<h1 style=\"color: #42C1C8;\"><b>Thanks!</b></h1><h2 style=\"color: #42C1C8;\"><b>We've sent a confirmation email.</b></h2>"
+		$('#email-form').replaceWith(html);
+		
+/*		var data=$('<div class="success message"><h5>FYI, something just happened!</h5><p>This is just an info notification message.</p> </div>');    
+		var popup= $('<div>');
+		popup.append(data);
+		$('body').append(popup);
+		popup.css("position","absolute");
+		popup.css("top", ($(window).height() - popup.height() ) / 2+ $(window).scrollTop() + "px");
+		popup.css("left", ($(window).width() - popup.width() ) / 2+ $(window).scrollLeft() + "px");            
+		popup.fadeOut(3000);*/
+
+	});
+
 	});
 </script>
 

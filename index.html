@@ -272,8 +272,6 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		Untorch.submitSignup()
-
 		var height = $('.navbar').height();
 
 		$('.navbar').hide();
@@ -308,7 +306,7 @@
 				ga('send', 'event', {
 					'eventCategory': 'signup',
 					'eventAction': 'signup'
-				})
+				});
 			}
 		});
 

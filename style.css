@@ -23,6 +23,34 @@ ul {
 	list-style: none;
 }
 
+.untorch-form {
+	max-width: 500px;
+}
+
+.untorch-input {
+	padding: 10px 16px;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 28px;
+    border-radius: 2px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.untorch-button {
+	background-color: rgb(46, 204, 113);
+    color: white;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: 4px 30px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 40px;
+}
+
 .fa-green {
 	padding-right: 15px;
 	color: #39c6ad;
@@ -58,14 +86,25 @@ a:hover {
 }
 
 .hero-image-container {
-	background-image: url("BG0.jpg");
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("BG0.jpg");
 	background-size: 120%;
-	background-position: center bottom;
+	background-position: center center;
     background-repeat: no-repeat;
 	height: 80vh;
 	font-family: "Lato", "Serif";
-	animation: mover 20s linear infinite;
+	animation: mover1 20s infinite;
 }
+
+.hero-signup-container {
+	background: rgba(0, 0, 0, 0.6);
+	padding: 15px;
+	border-radius: 25px;
+}
+
+.hero-signup-mesage {
+	color: white;
+}
+
 
 .pal-content {
 	background-image: url("BG01.png");
@@ -117,6 +156,20 @@ a:hover {
 
 	100% {
 		background-image: url("BG0.jpg");
+		background-position: center left;
+	}
+}
+
+@keyframes mover1{
+	0% {
+		background-position: center left;
+	}
+
+	40% {
+		background-position: center right;
+	}
+
+	100% {
 		background-position: center left;
 	}
 }

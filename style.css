@@ -7,16 +7,18 @@ body {
 h1 {
 	font-size: 40px;
 	font-weight: 400;
-	font-family: 'Oswald', sans-serif;
 	text-shadow: 3px 3px 3px #CCCCCC;
 }
 
 h3 {
 	font-size: 24px;
+	text-shadow: 3px 3px 3px #CCCCCC;
+	
+	font-family: 'Oswald', sans-serif;
 }
 
 h4 {
-	font-size: 24px;
+	font-size: 20px;
 }
 
 ul {

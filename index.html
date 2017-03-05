@@ -66,11 +66,11 @@
 						<form class="untorch-form">
 							<div class="hero-signup-mesage">
 								<h3><b>Turn Your Daily Fitness Into a Game</b></h3>
-								<p>Mobile Pals Run is a fitness app that uses your steps to battle wild Mobile Pals and motivate you to be more active!</p>
+								<p>Mobile Pals Run is a fitness app that uses your steps to battle wild Mobile Pals and helps you become more fit!</p>
 							</div>
 							<div data-untorch-element="alert"></div>
-							<input class="untorch-input" type="text" data-untorch-element="email" placeholder="Email" />
-							<button class="untorch-button" data-untorch-element="submit">Get Early Access</button>
+							<input id="signup-email1" class="untorch-input" type="text" data-untorch-element="email" placeholder="Email" />
+							<button id="signup1" class="untorch-button" data-untorch-element="submit"><b>Get Early Access</b></button>
 						</form>
 					</div>
 					<!-- <div class="hero-message"><b>
@@ -260,8 +260,8 @@
 					<br />
 					<form class="untorch-form">
 						<div data-untorch-element="alert"></div>
-						<input class="untorch-input" type="text" data-untorch-element="email" placeholder="Email" />
-						<button class="untorch-button" data-untorch-element="submit">Sign Up</button>
+						<input id="signup-email2" class="untorch-input" type="text" data-untorch-element="email" placeholder="Email" />
+						<button id="signup2" class="untorch-button" data-untorch-element="submit"><b>Sign Up</b></button>
 					</form>
 				</center>
 			</div>
@@ -338,6 +338,31 @@ src="https://www.facebook.com/tr?id=1822746604717437&ev=PageView&noscript=1"
 					'eventAction': 'signup'
 				});
 				fbq('track', 'Lead');
+			}
+		});
+
+		$('#signup1').click(function() {
+			console.log("first");
+
+			var email = $('#signup-email1').val();
+			if (email != '' && email.includes("@")) {
+				ga('send', 'event', {
+					'eventCategory': 'signup1',
+					'eventAction': 'signup1'
+				});
+				fbq('track', 'Lead', { location: "first"} );
+			}
+		});
+
+		$('#signup2').click(function() {
+			console.log("second");
+			var email = $('#signup-email2').val();
+			if (email != '' && email.includes("@")) {
+				ga('send', 'event', {
+					'eventCategory': 'signup2',
+					'eventAction': 'signup2'
+				});
+				fbq('track', 'Lead', { location: "second"} );
 			}
 		});
 
